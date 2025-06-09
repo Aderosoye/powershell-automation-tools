@@ -1,0 +1,14 @@
+[
+  {
+    "name": "System Health Check",
+    "script": "C:\\Scripts\\health.ps1",
+    "schedule": "09:00",
+    "lastRun": ""
+  },
+  {
+    "name": "User Audit",
+    "script": "C:\\Scripts\\audit.ps1",
+    "schedule": "14:30",
+    "lastRun": ""
+  }
+]

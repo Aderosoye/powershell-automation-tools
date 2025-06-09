@@ -88,3 +88,25 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ```powershell
 .\Get-NetworkStatusReport.ps1
+
+
+---
+
+# PowerTask - Module 2
+
+This script (`task-runner.ps1`) reads scheduled tasks from a JSON file and executes PowerShell scripts based on defined time schedules.
+
+## Features
+- Reads tasks from `tasks.json`
+- Executes if time matches schedule
+- Prevents duplicate runs per day
+- Updates `lastRun` timestamp
+
+## Sample JSON Format
+```json
+{
+  "name": "Task Name",
+  "script": "C:\\Path\\to\\script.ps1",
+  "schedule": "14:30",
+  "lastRun": ""
+}
