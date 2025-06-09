@@ -1,91 +1,90 @@
+# ⚙️ PowerShell Automation Tools by Ayobamidele Aderosoye
 
-# PowerShell Automation Tools
-
-This repository contains real-world PowerShell automation scripts designed for system administrators and DevOps professionals. Each tool includes code, documentation, and output samples.
+A curated set of real-world PowerShell scripts developed for system administrators, DevOps engineers, and IT automation professionals. Each script is designed for reliability, auditability, and extensibility across production and enterprise environments.
 
 ---
 
 ## 🔧 Inactive User Cleanup Tool
 
-**Purpose:** Identify local users inactive for 30+ days, display a colored summary, generate CSV/HTML reports, and optionally disable the accounts.
+**Purpose:** Identify local users inactive for 30+ days. Provides colored console feedback and generates CSV/HTML audit reports.
 
 ### Features:
-- Detects inactivity using `LastLogon`
-- CSV and HTML report generation
-- Optional account disabling with confirmation
-- Customizable for Active Directory environments
+- Detects inactive local/AD users via `LastLogon`
+- Generates exportable reports
+- Optional: auto-disable accounts with user confirmation
+- Ideal for system hardening and compliance checks
 
-### Sample Output:
-HTML and CSV reports are included in the `inactive-user-cleanup` folder.
+📂 Location: `/inactive-user-cleanup`
 
 ---
 
 ## 🩺 System Health Report Tool
 
-**Purpose:** Quickly analyze and report the health of a Windows system using PowerShell. Ideal for sysadmins and monitoring routines.
+**Purpose:** Performs a complete system health check and presents vital metrics in both terminal and exportable formats.
 
 ### Features:
-- CPU usage monitoring
-- Memory usage summary
-- System uptime checker
-- OS version display
-- CSV + HTML report generation
-- Color-coded console feedback
+- CPU, memory, uptime, and OS diagnostics
+- Outputs to CSV and HTML
+- Color-coded console indicators
+- Great for NOC/Helpdesk triage and scheduled monitoring
+
+📂 Location: `/system-health-report`
 
 ---
 
 ## ⏰ Scheduled Task Auditor
 
-**Purpose:** Monitor all scheduled tasks on a system, identify failed or disabled tasks, and generate comprehensive audit reports.
+**Purpose:** Audits scheduled tasks, detects failures, and documents automation consistency across systems.
 
 ### Features:
-- Lists all scheduled tasks
-- Displays status, last run time, and result codes
-- Highlights failed and disabled tasks
-- Exports results to CSV and HTML
-- Useful for backup monitoring and task diagnostics
+- Lists all scheduled tasks with key metadata
+- Flags failures, disabled tasks, or inconsistencies
+- Outputs HTML and CSV audit files
+- Suitable for backup task validation and enterprise diagnostics
+
+📂 Location: `/scheduled-task-auditor`
 
 ---
 
 ## ♻️ Service Monitor & Auto-Restarter
 
-**Purpose:** Monitor critical Windows services and ensure uptime by restarting any that are stopped. Generates logs and reports for system admins.
+**Purpose:** Continuously monitors critical services and restarts any that fail. Creates logs and ensures maximum uptime.
 
 ### Features:
-- Checks status of selected services
-- Automatically restarts stopped ones
-- Logs all actions taken
-- Exports status to CSV and HTML
-- Color-coded console output
+- Service status monitoring
+- Automatic restart logic
+- CSV/HTML logs and summaries
+- Reliable for server-side resilience
+
+📂 Location: `/service-auto-restart`
 
 ---
 
 ## 🚀 Startup Program Auditor
 
-**Purpose:** Scan and list all programs that auto-start on system boot, including registry entries and startup folders. Highlights suspicious or unusual entries.
+**Purpose:** Scans system startup entries and flags unusual or suspicious programs that auto-load on boot.
 
 ### Features:
-- Lists all startup items from folders and registry
-- Flags entries with `temp` or `appdata` paths
-- Generates CSV and HTML reports
-- Useful for security checks and performance tuning
+- Enumerates programs from registry and folders
+- Flags paths from temp/appdata/suspicious origins
+- Generates detailed CSV and HTML exports
+- Helps with malware detection and performance cleanup
+
+📂 Location: `/startup-auditor`
 
 ---
 
-# Get-NetworkStatusReport.ps1
+## 🌐 Get-NetworkStatusReport.ps1
 
-This PowerShell script audits and reports the current network status of your Windows system, including:
+**Purpose:** Audits and reports your Windows system’s network configuration, helping sysadmins quickly assess connectivity status.
 
-- IP Address
-- Default Gateway
-- DNS Servers
-- Network Interface Status
-- Internet Connectivity
+### Features:
+- Extracts IP Address, Gateway, and DNS
+- Displays all network interfaces with link speed and status
+- Performs an internet connectivity test (ping to 8.8.8.8)
+- Clean console output with table formatting
 
-## Usage
+### Usage:
 
 ```powershell
 .\Get-NetworkStatusReport.ps1
-```
-
-No admin rights required. Ideal for quick diagnostics and network visibility.
