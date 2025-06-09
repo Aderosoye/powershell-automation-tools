@@ -1,14 +1,16 @@
-# ⚙️ PowerShell Automation Tools by Ayobamidele Aderosoye
+PowerShell Automation Tools by Ayobamidele Aderosoye
+⚙️ PowerShell Automation Tools by Ayobamidele Aderosoye
 
 A curated set of real-world PowerShell scripts developed for system administrators, DevOps engineers, and IT automation professionals. Each script is designed for reliability, auditability, and extensibility across production and enterprise environments.
 
 ---
 
-## 🔧 Inactive User Cleanup Tool
+🔧 Inactive User Cleanup Tool
 
 **Purpose:** Identify local users inactive for 30+ days. Provides colored console feedback and generates CSV/HTML audit reports.
 
-### Features:
+Features:
+
 - Detects inactive local/AD users via `LastLogon`
 - Generates exportable reports
 - Optional: auto-disable accounts with user confirmation
@@ -18,11 +20,12 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ---
 
-## 🩺 System Health Report Tool
+🩺 System Health Report Tool
 
 **Purpose:** Performs a complete system health check and presents vital metrics in both terminal and exportable formats.
 
-### Features:
+Features:
+
 - CPU, memory, uptime, and OS diagnostics
 - Outputs to CSV and HTML
 - Color-coded console indicators
@@ -32,11 +35,12 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ---
 
-## ⏰ Scheduled Task Auditor
+⏰ Scheduled Task Auditor
 
 **Purpose:** Audits scheduled tasks, detects failures, and documents automation consistency across systems.
 
-### Features:
+Features:
+
 - Lists all scheduled tasks with key metadata
 - Flags failures, disabled tasks, or inconsistencies
 - Outputs HTML and CSV audit files
@@ -46,11 +50,12 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ---
 
-## ♻️ Service Monitor & Auto-Restarter
+♻️ Service Monitor & Auto-Restarter
 
 **Purpose:** Continuously monitors critical services and restarts any that fail. Creates logs and ensures maximum uptime.
 
-### Features:
+Features:
+
 - Service status monitoring
 - Automatic restart logic
 - CSV/HTML logs and summaries
@@ -60,11 +65,12 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ---
 
-## 🚀 Startup Program Auditor
+🚀 Startup Program Auditor
 
 **Purpose:** Scans system startup entries and flags unusual or suspicious programs that auto-load on boot.
 
-### Features:
+Features:
+
 - Enumerates programs from registry and folders
 - Flags paths from temp/appdata/suspicious origins
 - Generates detailed CSV and HTML exports
@@ -74,39 +80,52 @@ A curated set of real-world PowerShell scripts developed for system administrato
 
 ---
 
-## 🌐 Get-NetworkStatusReport.ps1
+🌐 Get-NetworkStatusReport.ps1
 
 **Purpose:** Audits and reports your Windows system’s network configuration, helping sysadmins quickly assess connectivity status.
 
-### Features:
+Features:
+
 - Extracts IP Address, Gateway, and DNS
 - Displays all network interfaces with link speed and status
 - Performs an internet connectivity test (ping to 8.8.8.8)
 - Clean console output with table formatting
 
-### Usage:
+Usage:
 
-```powershell
 .\Get-NetworkStatusReport.ps1
 
+📂 Location: `/Get-NetworkStatusReport`
 
 ---
 
-# PowerTask - Module 2
+🧠 PowerTask - Module 2
 
-This script (`task-runner.ps1`) reads scheduled tasks from a JSON file and executes PowerShell scripts based on defined time schedules.
+**Purpose:** Reads scheduled tasks from a JSON file and runs due PowerShell scripts based on defined time schedules.
 
-## Features
-- Reads tasks from `tasks.json`
-- Executes if time matches schedule
-- Prevents duplicate runs per day
-- Updates `lastRun` timestamp
+Features:
 
-## Sample JSON Format
-```json
-{
-  "name": "Task Name",
-  "script": "C:\\Path\\to\\script.ps1",
-  "schedule": "14:30",
-  "lastRun": ""
-}
+- JSON-based task scheduling
+- Checks if script is due to run by time
+- Prevents duplicate runs within a day
+- Executes the specified script using PowerShell
+- Updates `lastRun` timestamp to track execution
+
+Sample tasks.json Entry:
+
+[
+  {
+    "name": "System Health Check",
+    "script": "C:\Scripts\health.ps1",
+    "schedule": "09:00",
+    "lastRun": ""
+  },
+  {
+    "name": "User Audit",
+    "script": "C:\Scripts\audit.ps1",
+    "schedule": "14:30",
+    "lastRun": ""
+  }
+]
+
+📂 Location: `/PowerTask-Module2`
