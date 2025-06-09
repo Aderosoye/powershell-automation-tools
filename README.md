@@ -69,3 +69,23 @@ HTML and CSV reports are included in the `inactive-user-cleanup` folder.
 - Flags entries with `temp` or `appdata` paths
 - Generates CSV and HTML reports
 - Useful for security checks and performance tuning
+
+---
+
+# Get-NetworkStatusReport.ps1
+
+This PowerShell script audits and reports the current network status of your Windows system, including:
+
+- IP Address
+- Default Gateway
+- DNS Servers
+- Network Interface Status
+- Internet Connectivity
+
+## Usage
+
+```powershell
+.\Get-NetworkStatusReport.ps1
+```
+
+No admin rights required. Ideal for quick diagnostics and network visibility.
