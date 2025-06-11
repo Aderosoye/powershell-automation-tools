@@ -1,109 +1,88 @@
-PowerShell Automation Tools by Ayobamidele Aderosoye
 ⚙️ PowerShell Automation Tools by Ayobamidele Aderosoye
 
 A curated set of real-world PowerShell scripts developed for system administrators, DevOps engineers, and IT automation professionals. Each script is designed for reliability, auditability, and extensibility across production and enterprise environments.
 
 ---
 
-🔧 Inactive User Cleanup Tool
+🔧 Inactive User Cleanup Tool  
+📂 Location: `/inactive-user-cleanup`
 
 **Purpose:** Identify local users inactive for 30+ days. Provides colored console feedback and generates CSV/HTML audit reports.
-
-Features:
 
 - Detects inactive local/AD users via `LastLogon`
 - Generates exportable reports
 - Optional: auto-disable accounts with user confirmation
 - Ideal for system hardening and compliance checks
 
-📂 Location: `/inactive-user-cleanup`
-
 ---
 
-🩺 System Health Report Tool
+🩺 System Health Report Tool  
+📂 Location: `/system-health-report`
 
 **Purpose:** Performs a complete system health check and presents vital metrics in both terminal and exportable formats.
-
-Features:
 
 - CPU, memory, uptime, and OS diagnostics
 - Outputs to CSV and HTML
 - Color-coded console indicators
 - Great for NOC/Helpdesk triage and scheduled monitoring
 
-📂 Location: `/system-health-report`
-
 ---
 
-⏰ Scheduled Task Auditor
+⏰ Scheduled Task Auditor  
+📂 Location: `/scheduled-task-auditor`
 
 **Purpose:** Audits scheduled tasks, detects failures, and documents automation consistency across systems.
-
-Features:
 
 - Lists all scheduled tasks with key metadata
 - Flags failures, disabled tasks, or inconsistencies
 - Outputs HTML and CSV audit files
 - Suitable for backup task validation and enterprise diagnostics
 
-📂 Location: `/scheduled-task-auditor`
-
 ---
 
-♻️ Service Monitor & Auto-Restarter
+♻️ Service Monitor & Auto-Restarter  
+📂 Location: `/service-auto-restart`
 
 **Purpose:** Continuously monitors critical services and restarts any that fail. Creates logs and ensures maximum uptime.
-
-Features:
 
 - Service status monitoring
 - Automatic restart logic
 - CSV/HTML logs and summaries
 - Reliable for server-side resilience
 
-📂 Location: `/service-auto-restart`
-
 ---
 
-🚀 Startup Program Auditor
+🚀 Startup Program Auditor  
+📂 Location: `/startup-auditor`
 
 **Purpose:** Scans system startup entries and flags unusual or suspicious programs that auto-load on boot.
-
-Features:
 
 - Enumerates programs from registry and folders
 - Flags paths from temp/appdata/suspicious origins
 - Generates detailed CSV and HTML exports
 - Helps with malware detection and performance cleanup
 
-📂 Location: `/startup-auditor`
-
 ---
 
-🌐 Get-NetworkStatusReport.ps1
+🌐 Get-NetworkStatusReport.ps1  
+📂 Location: `/Get-NetworkStatusReport`
 
 **Purpose:** Audits and reports your Windows system’s network configuration, helping sysadmins quickly assess connectivity status.
-
-Features:
 
 - Extracts IP Address, Gateway, and DNS
 - Displays all network interfaces with link speed and status
 - Performs an internet connectivity test (ping to 8.8.8.8)
 - Clean console output with table formatting
 
-Usage:
-
-.\Get-NetworkStatusReport.ps1
-
-📂 Location: `/Get-NetworkStatusReport`
+Usage:  
+`.\Get-NetworkStatusReport.ps1`
 
 ---
 
-🧠 PowerTask - Module 2
+🧠 PowerTask - Module 2  
+📂 Location: `/PowerTask-Module2`
 
 **Purpose:** Reads scheduled tasks from a JSON file and runs due PowerShell scripts based on defined time schedules.
-
-Features:
 
 - JSON-based task scheduling
 - Checks if script is due to run by time
@@ -111,21 +90,40 @@ Features:
 - Executes the specified script using PowerShell
 - Updates `lastRun` timestamp to track execution
 
-Sample tasks.json Entry:
+---
 
-[
-  {
-    "name": "System Health Check",
-    "script": "C:\Scripts\health.ps1",
-    "schedule": "09:00",
-    "lastRun": ""
-  },
-  {
-    "name": "User Audit",
-    "script": "C:\Scripts\audit.ps1",
-    "schedule": "14:30",
-    "lastRun": ""
-  }
-]
+📊 Azure Cost Optimization  
+📂 Location: `/case-studies/azure-cost-optimization`
 
-📂 Location: `/PowerTask-Module2`
+**Purpose:** Automates Azure cost management by identifying underutilized resources and shutting them down automatically.
+
+- Connects to Azure and pulls usage data
+- Detects low-CPU VMs
+- Stops or deallocates wasteful resources
+- Outputs optimization report
+
+Assets:  
+[optimize-cost.ps1](./case-studies/azure-cost-optimization/optimize-cost.ps1) •  
+[PDF Guide](./case-studies/azure-cost-optimization/azure-cost-optimization.pdf) •  
+![Preview](./case-studies/azure-cost-optimization/azure-cost-optimization.png)
+
+---
+
+🛠️ Remote Support Troubleshooting Toolkit  
+📂 Location: `/case-studies/remote-support-guide`
+
+**Purpose:** Provides a Tier 1/2 support script that flushes DNS, clears temp files, resets network adapters, and logs system info.
+
+- Built for helpdesk and remote techs
+- Includes menu-driven support automation
+- Logs output for audits and escalations
+
+Assets:  
+[remote-support.ps1](./case-studies/remote-support-guide/remote-support.ps1) •  
+[PDF Guide](./case-studies/remote-support-guide/remote-support-guide.pdf) •  
+![Preview](./case-studies/remote-support-guide/remote-support-guide.png)
+
+---
+
+🔁 More projects dropping soon. Stay tuned.
+
