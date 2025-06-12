@@ -127,3 +127,32 @@ Assets:
 
 🔁 More projects dropping soon. Stay tuned.
 
+---
+
+
+
+🧩 Schedule Task UI Component  
+
+📂 Location: `/PowerTask-ScheduleForm`
+
+
+
+**Purpose:** React-based frontend component to allow users to schedule PowerShell or Bash scripts from the web.
+
+
+
+- Fields: Script Name, Language, Frequency, Time, Date, Repeat, Enable toggle
+
+- Built with TailwindCSS + ShadCN UI
+
+- Submit button triggers task configuration logic (backend ready)
+
+- Clean form UI with modern styling
+
+
+
+Assets:  
+
+[ScheduleTaskForm.tsx](./PowerTask-ScheduleForm/ScheduleTaskForm.tsx) •  
+
+![Preview Image](./PowerTask-ScheduleForm/schedule_task_preview.png)
