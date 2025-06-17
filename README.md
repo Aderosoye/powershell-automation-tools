@@ -79,6 +79,19 @@ Usage:
 
 ---
 
+📊 Disk Usage Monitor & Email Alert  
+📂 Location: `/disk-usage-alert`
+
+**Purpose:** Scans system drives and sends an email alert if usage exceeds the defined threshold (default: 80%).
+
+- Automatically checks all logical drives
+- Exports CSV report of usage statistics
+- Email alert if any drive exceeds threshold
+- Includes flexible parameter block for threshold, path, and recipient
+- Useful for proactive disk space monitoring and reporting
+
+---
+
 🧠 PowerTask - Module 2  
 📂 Location: `/PowerTask-Module2`
 
@@ -126,36 +139,3 @@ Assets:
 ---
 
 🔁 More projects dropping soon. Stay tuned.
-
----
-
-
-
-🧩 Schedule Task UI Component  
-
-📂 Location: `/PowerTask-ScheduleForm`
-
-
-
-**Purpose:** React-based frontend component to allow users to schedule PowerShell or Bash scripts from the web.
-
-
-
-- Fields: Script Name, Language, Frequency, Time, Date, Repeat, Enable toggle
-
-- Built with TailwindCSS + ShadCN UI
-
-- Submit button triggers task configuration logic (backend ready)
-
-- Clean form UI with modern styling
-
-
-
-Assets:  
-
-[ScheduleTaskForm.tsx](./PowerTask-ScheduleForm/ScheduleTaskForm.tsx) •  
-
-![Preview Image](./PowerTask-ScheduleForm/schedule_task_preview.png)
-
-⚡ Want 4 ready-made scripts + 1 doc template?
-Buy Toolkit: https://adroyphill.gumroad.com/l/powershell-automation-toolkit
